@@ -1,0 +1,40 @@
+#header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+
+}
+
+.logoutButton {
+  color: rgb(0, 0, 0);
+  background-color: rgb(16, 245, 245);
+  border-radius: 10px;
+}
+
+.logoutButton:hover {
+  background-color: black;
+  color: white;
+}
+
+#hobbyContainer {
+  height: 50vh;
+  width: 70vw;
+  margin-top: 100px;
+  display: flex;
+
+}
+
+.homeMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createHobby {
+  float: left;
+  margin-top: 50px;
+}
+
+.createHobbyContainer {
+  
+}
