@@ -7,6 +7,7 @@ const ctrl = require('./controllers/controller')
 
 const app = express()
 app.use(express.json())
+
 app.use(session({
   resave: false,
   saveUninitialized: true,
@@ -14,6 +15,7 @@ app.use(session({
   secret: SESSION_SECRET
 }))
 
+app.use(express.static(`${__dirname}/../build`));
 massive({
   connectionString: CONNECTION_STRING,
   ssl: {rejectUnauthorized: false}
