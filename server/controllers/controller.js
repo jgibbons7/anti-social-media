@@ -58,11 +58,24 @@ module.exports = {
 
   },
 
-  deleteHobby: async (req, res) => {},
-  updateHobby: async (req, res) => {},
+  deleteHobby: async (req, res) => {
+    const db = req.app.get('db')
+    const {id} = req.params
+    const deleted = await db.delete_hobby(id)
+    res.status(200)
+  },
+
+  updateHobby: async (req, res) => {
+    const db = req.app.get('db')
+    const {id} = req.params
+    const {body} = req.body
+    const updated = await db.update_hobby(id, body)
+    res.status(200).send(updated)
+  },
+
   getHobbies: async (req, res) => {
     const db = req.app.get('db')
-    const {userId} = req.body
+    const {userId} = req.params
     const getHobby = await db.get_hobbies(userId)
     res.status(200).send(getHobby)
   }

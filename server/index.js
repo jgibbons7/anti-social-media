@@ -34,4 +34,4 @@ app.post('/api/hobby', ctrl.createHobby)
 app.delete('/api/hobby/:id', ctrl.deleteHobby)
 app.put('/api/hobby/:id', ctrl.updateHobby)
 
-app.get('/api/hobby', ctrl.getHobbies)
+app.get('/api/hobby/:userId', ctrl.getHobbies)

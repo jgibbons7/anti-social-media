@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
 import './Home.css'
 import Axios from 'axios'
 
@@ -37,8 +36,6 @@ class Home extends Component {
       <div id='header'>
         <h1 className='logoutButton'>Home</h1>
         <p className='logoutButton'>Welcome {this.props.username}!</p>
-        <Link className='logoutButton' to='/'>Logout</Link>
-        <Link to='/hobby'>Hobbies</Link>
       </div>
 
           <div id='hobbyContainer'>

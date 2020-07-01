@@ -1,9 +1,28 @@
 import React from 'react'
+import {Link, NavLink} from 'react-router-dom'
+import {connect} from 'react-redux'
+import './Nav.css'
 
 function Nav(props) {
   return(
-    <h1>Nav</h1>
+    <div id='navMain'>
+    <h1 className='title'>ASM!</h1>
+        <Link to='/'>
+          <button className='logoutButton'>Logout</button>
+        </Link>
+        <Link to='/dashboard'>
+          <button className='logoutButton'>Home</button>  
+        </Link>
+        <Link to='/hobby'>
+          <button className='logoutButton'>Hobbies</button>
+        </Link>
+        <Link>
+          <button className='logoutButton'>Profile</button>
+        </Link>
+        
+    </div>
   )
 }
 
-export default Nav
+const mapStateToProps = reduxState => reduxState
+export default connect(mapStateToProps)(Nav)
