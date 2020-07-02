@@ -2,29 +2,60 @@
   display: flex;
   justify-content: space-around;
   width: 100vw;
+  font-size: 36px;
 
 }
 
 #hobbyContainer {
   height: 50vh;
-  width: 70vw;
+  width: 80vw;
   margin-top: 100px;
   display: flex;
+  justify-content: space-evenly;
+}
 
+.createHobbyContainer {
+  display: flex;
+  height: 35px;
 }
 
 .homeMain {
   display: flex;
   flex-direction: column;
+  width: 100vw;
   align-items: center;
-  background-color: rgb(172, 255, 255);
 }
 
-.createHobby {
-  float: left;
-  margin-top: 50px;
+
+.chat {
+  margin-top: 100px;
 }
 
-.createHobbyContainer {
+.teaseButton {
+  margin-top: 30px;
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  background-color: #007BFF;
+}
 
+.innerHobbyContainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.createHobbyButton {
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  background-color: #007BFF;
+  margin-left: 15px;
+}
+
+.createHobbyButton:hover, .teaseButton:hover {
+  background-color: black;
+  color: white;
 }

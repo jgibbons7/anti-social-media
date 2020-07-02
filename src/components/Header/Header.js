@@ -62,7 +62,12 @@ class Header extends Component {
       
       <button className='loginButton'>Register</button>
       
-      <div className='textBox'>This is text in a box.</div>
+      <div className='textBox'>
+        <p className='comments'>"Anti-Social Media saved me tons of time during the day.  My kids even got lunch today!"  -Karen</p>
+        <p className='comments'>"I needed a break from everyone else in the world, now I can focus on what matters.  Video games." 
+        
+        -John</p>
+        </div>
     </div> 
     )
   }

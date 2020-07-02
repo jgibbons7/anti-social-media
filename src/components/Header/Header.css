@@ -1,5 +1,5 @@
 .landing {
-  background-color: aqua;
+  background-color: whitesmoke;
   height: 100vh;
   width: 100vw;
   justify-content: center;
@@ -8,11 +8,18 @@
   flex-direction: column;
 }
 
+.comments {
+  padding: 30px;
+  text-align: center;
+  border: solid 1px black;
+}
+
 .textBox {
   width: 50vw;
   color: rgb(34, 48, 250);
-  height: 50vh;
-  background-color: aliceblue;
+  height: auto;
+  background-color: whitesmoke;
+  border: 2px 2px black;
   margin-top: 50px;
   display: flex;
   justify-content: center;

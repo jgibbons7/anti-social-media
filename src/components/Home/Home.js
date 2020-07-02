@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './Home.css'
 import Axios from 'axios'
-
+import Chat from '../Chat/Chat'
+import SMSForm from '../SMSForm/SMSForm';
 
 class Home extends Component {
 
@@ -34,12 +35,19 @@ class Home extends Component {
   return(
     <div className='homeMain'>
       <div id='header'>
-        <h1 className='logoutButton'>Home</h1>
-        <p className='logoutButton'>Welcome {this.props.username}!</p>
+        <p>Welcome {this.props.username}!</p>
       </div>
 
           <div id='hobbyContainer'>
-            <p>Hobby</p>
+            <div className='innerHobbyContainer'>
+              <button className='teaseButton'>News Feed</button>
+              <button className='teaseButton'>Hobby</button>
+              <button className='teaseButton'>Hobby</button>
+              <SMSForm/>
+            </div>
+            <div>
+              <Chat className='chat'/>
+            </div>
           </div>
             <div className='createHobbyContainer'>
               <input placeholder='Hobby Name'type='text'
@@ -52,7 +60,7 @@ class Home extends Component {
                 value={hobbyImage}
                 onChange={e => this.changeHandler(e)}
                 />
-              <button type='submit' className='createHobby' onClick={() => this.createHobby()}>Create Hobby</button>
+              <button type='submit' className='createHobbyButton' onClick={() => this.createHobby()}>Create Hobby</button>
             </div>
     </div>
     )

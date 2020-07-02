@@ -1,0 +1,28 @@
+.container {
+  border: violet;
+  /* float: right; */
+  float: inline-end;
+  display: flex;
+  height: 500px;
+  width: 500px;
+  margin-right: 0vw;
+}
+
+.card {
+  height: 400px;
+  width: 400px;
+  float: left;
+
+}
+
+.card-body {
+  text-align: left;
+}
+
+.col-4 {
+  padding-left: 500px;
+}
+
+.createHobbyButton {
+  border: solid black 1px;
+}

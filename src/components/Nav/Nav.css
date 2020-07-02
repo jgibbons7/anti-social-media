@@ -1,11 +1,13 @@
 #navMain {
-  background-color: navy;
+  background-color: #007BFF;
   height: 10vh;
 }
 
 .title {
   font-size: 8vh;
   float: left;
+  color: white;
+  margin-left: 10vw;
 }
 
 .logoutButton {
@@ -16,10 +18,15 @@
   width: 80px;
   height: 35px;
   float: right;
+  border: none;
 }
 
+.logout {
+  margin-right: 10vw;
+}
 .logoutButton:hover {
   background-color: black;
   color: white;
   
 }
+
