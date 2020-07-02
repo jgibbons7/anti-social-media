@@ -27,7 +27,6 @@
 
 .buttonContainer {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -55,4 +54,27 @@
   font-size: 24px;
   text-align: center;
 }
+
+.createHobbyButton {
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  background-color: #007BFF;
+  margin-left: 15px;
+}
+
+.createHobbyContainer {
+  display: flex;
+  height: 35px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.mapHobbyName {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
 

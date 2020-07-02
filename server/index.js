@@ -9,7 +9,7 @@ const ctrl = require('./controllers/controller')
 const app = express()
 
 // CHAT APP //
-var app1 = express()
+// var app1 = express()
 // var http = require('http').createServer(app1)
 // var io = require('socket.io')(http)
 
@@ -34,7 +34,7 @@ var app1 = express()
 //   });
 // });
 
-server = app1.listen(4001, function() {
+server = app.listen(4001, function() {
   console.log(`Chat is running on 4001`)
 })
 

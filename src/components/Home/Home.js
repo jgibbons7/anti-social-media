@@ -15,12 +15,7 @@ class Home extends Component {
     }
   }
 
-  createHobby() {
-    const {hobby, hobbyImage} = this.state
-    const userId = this.props.userId
-    Axios.post('/api/hobby', {hobby, hobbyImage, userId})
-    .then(() => this.props.history.push('/hobby'))
-  }
+  
 
   changeHandler(e){
     this.setState({
@@ -37,31 +32,21 @@ class Home extends Component {
       <div id='header'>
         <p>Welcome {this.props.username}!</p>
       </div>
-
+        <div className='subtitle'>
+        <p>This is your safe space! Enjoy your stay.</p>
+        </div>
           <div id='hobbyContainer'>
             <div className='innerHobbyContainer'>
               <button className='teaseButton'>News Feed</button>
-              <button className='teaseButton'>Hobby</button>
-              <button className='teaseButton'>Hobby</button>
-              <SMSForm/>
+              <button className='teaseButton'>Friends</button>
+              <button className='teaseButton'>Marketplace</button>
             </div>
+              <SMSForm/>
             <div>
               <Chat className='chat'/>
             </div>
           </div>
-            <div className='createHobbyContainer'>
-              <input placeholder='Hobby Name'type='text'
-                name='hobby'
-                value={hobby}
-                onChange={e => this.changeHandler(e)}
-                />
-              <input placeholder='Hobby Image'type='text'
-                name='hobbyImage'
-                value={hobbyImage}
-                onChange={e => this.changeHandler(e)}
-                />
-              <button type='submit' className='createHobbyButton' onClick={() => this.createHobby()}>Create Hobby</button>
-            </div>
+            
     </div>
     )
   }

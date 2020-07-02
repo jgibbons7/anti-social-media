@@ -60,6 +60,7 @@ class SMSForm extends Component {
         onSubmit={this.onSubmit}
         className={this.state.error ? 'error sms-form' : 'sms-form'}
       >
+        <p className='smsP'>Are you having a bad day? Rather than try your luck with a depressing news feed, try a text message from one of the qualified people logged into your account.</p>
         <div>
           <label htmlFor="to">To:</label>
           <input

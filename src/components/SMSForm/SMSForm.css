@@ -1,6 +1,8 @@
 .sms-form {
   text-align: left;
   padding: 1em;
+  border: solid black 1px;
+  max-height: 300px;
 }
 .sms-form label {
   display: block;
@@ -17,7 +19,22 @@
 .sms-form button {
   font-size: 1em;
   width: 100%;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 10px;
+  color: white;
 }
 .sms-form.error {
   outline: 2px solid #f00;
+}
+
+.sms-form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.smsP {
+  max-width: 200px;
+  margin-bottom: 30px;
+  text-align: center;
 }

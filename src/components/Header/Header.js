@@ -10,8 +10,15 @@ class Header extends Component {
     super()
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      age: '',
+      registered: false
     }
+  }
+
+
+  componentDidMount() {
+    console.log(this.state)
   }
 
   changeHandler(e){
@@ -32,11 +39,19 @@ class Header extends Component {
   }
 
   register() {
-
+    const {username, password, age} = this.state
+    axios.post('/api/user/register', {username, password, age})
+    .then(res => {
+      this.props.loginUser(res.data)
+      this.props.history.push('/dashboard')
+    })
+    .catch(err => {
+      alert(err.response.data)
+    })
   }
 
   render(){
-    const {username, password} = this.state
+    const {username, password, age} = this.state
   return(
     <div className='landing'>
       <h1 id='title'>ASM</h1>
@@ -60,13 +75,21 @@ class Header extends Component {
       
       <p className='welcomeMessage'>Welcome to Anti-Social Media!  If this is your first time, click 'Register' to make an account.</p>
       
-      <button className='loginButton'>Register</button>
+      
+      {this.state.registered ? (
+        <div>
+          <button className='loginButton' onClick={() => this.register()}>Register</button>
+          <input placeholder='Username' type='username' name='username' value={username} onChange={e => this.changeHandler(e)} className='loginInput'></input>
+          <input placeholder='Password' type='password' name='password' value={password} onChange={e => this.changeHandler(e)} className='loginInput'></input>
+          <input placeholder='Age' type='age' name='age' value={age} onChange={e => this.changeHandler(e)} className='loginInput'></input>
+        </div>
+        ) : (
+          <button className='loginButton' onClick={() => this.setState({registered: true})}>Register</button>
+      )}
       
       <div className='textBox'>
         <p className='comments'>"Anti-Social Media saved me tons of time during the day.  My kids even got lunch today!"  -Karen</p>
-        <p className='comments'>"I needed a break from everyone else in the world, now I can focus on what matters.  Video games." 
-        
-        -John</p>
+        <p className='comments'>"I needed a break from everyone else in the world, now I can focus on what matters.  Video games."  -Jack</p>
         </div>
     </div> 
     )

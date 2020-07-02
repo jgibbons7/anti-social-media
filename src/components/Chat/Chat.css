@@ -26,3 +26,8 @@
 .createHobbyButton {
   border: solid black 1px;
 }
+
+.btn-primary:hover {
+  background-color: black;
+  color: white;
+}

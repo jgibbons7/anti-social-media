@@ -12,6 +12,7 @@
   padding: 30px;
   text-align: center;
   border: solid 1px black;
+  margin-left: 10px;
 }
 
 .textBox {
@@ -23,6 +24,7 @@
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  max-width: 500px;
 }
 
 .loginInput {
