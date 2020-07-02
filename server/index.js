@@ -13,9 +13,9 @@ var app1 = express()
 // var http = require('http').createServer(app1)
 // var io = require('socket.io')(http)
 
-// app1.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/index.html')
-// })
+app1.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
 
 // http.listen(4001, () => {
 //   console.log('listening on *:4001')
