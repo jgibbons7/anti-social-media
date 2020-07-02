@@ -4,10 +4,12 @@
 }
 
 .title {
-  font-size: 8vh;
   float: left;
   color: white;
   margin-left: 10vw;
+  height: 8vh;
+  width: 8vw;
+  margin-top: 1vh;
 }
 
 .logoutButton {

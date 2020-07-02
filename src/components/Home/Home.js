@@ -38,6 +38,8 @@ class Home extends Component {
               <button className='teaseButton'>News Feed</button>
               <button className='teaseButton'>Friends</button>
               <button className='teaseButton'>Marketplace</button>
+              <button className='teaseButton'>Events</button>
+              <button className='teaseButton'>Offers</button>
             </div>
               <SMSForm/>
             <div>
