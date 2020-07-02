@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './Home.css'
-import Axios from 'axios'
 import Chat from '../Chat/Chat'
 import SMSForm from '../SMSForm/SMSForm';
 
@@ -26,7 +25,6 @@ class Home extends Component {
 
   render() {
     console.log(this.props)
-    const {hobby, hobbyImage} = this.state
   return(
     <div className='homeMain'>
       <div id='header'>
