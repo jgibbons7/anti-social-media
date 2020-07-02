@@ -124,6 +124,7 @@ app.use(session({
 }))
 
 app.use(express.static(`${__dirname}/../build`));
+app1.use(express.static(`${__dirname}/../build`));
 massive({
   connectionString: CONNECTION_STRING,
   ssl: {rejectUnauthorized: false}
