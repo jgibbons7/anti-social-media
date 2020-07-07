@@ -13,7 +13,7 @@ var app1 = express()
 // var http = require('http').createServer(app1)
 // var io = require('socket.io')(http)
 
-app1.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
@@ -124,7 +124,7 @@ app.use(session({
 }))
 
 app.use(express.static(`${__dirname}/../build`));
-app1.use(express.static(`${__dirname}/../build`));
+// app1.use(express.static(`${__dirname}/../build`));
 massive({
   connectionString: CONNECTION_STRING,
   ssl: {rejectUnauthorized: false}
