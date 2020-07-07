@@ -13,7 +13,7 @@ class Chat extends React.Component{
         messages: []
         };
 
-        this.socket = io('http://164.90.152.28');
+        this.socket = io('http://www.antisocialspaces.com/');
 
         this.socket.on('RECEIVE_MESSAGE', function(data){
             addMessage(data);
