@@ -13,7 +13,7 @@ var app1 = express()
 // var http = require('http').createServer(app1)
 // var io = require('socket.io')(http)
 
-app.get('/', (req, res) => {
+app1.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
